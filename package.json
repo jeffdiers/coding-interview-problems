@@ -1,5 +1,5 @@
 {
-  "name": "chat-gpt-coding-problems",
+  "name": "coding-interview-problems",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

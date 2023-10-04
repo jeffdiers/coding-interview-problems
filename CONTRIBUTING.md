@@ -36,6 +36,26 @@ git push origin feature/my-new-feature
 
 8. **Code Review:** Your pull request will undergo a code review process. Be prepared to make changes and respond to feedback.
 
+## Adding a New Problem
+
+1. **Create a Subdirectory:** Use this bash script to create a subdirectory with the necessary files included. Replace `my_new_problem` with the name of your new problem.
+
+```shell
+mkdir my_new_problem && cd $_ && touch index.ts index.test.ts solution.ts
+```
+
+2. **Add a Description:** Add a description of the problem inside `index.ts`. Make sure to include function inputs, expected outputs, and examples.
+
+3. **Test Your Problem:** Include a test suit inside `index.test.ts` Here are some things you can test for:
+
+- _Input Validation:_ Check if the function handles invalid or unexpected inputs gracefully.
+- _Output Validation:_ Verify that the function returns the expected output for a given set of inputs.
+- _Boundary Conditions:_ Examine how the function behaves at the boundaries of its expected input. For example, if a function accepts an array, test it with an empty array, an array with one element, or an array with the maximum allowed number of elements.
+- _Edge Cases:_ Test for edge cases that may trigger unusual behavior. For example, if your function processes dates, test it with leap years or daylight saving time transitions.
+- _Performance:_ Evaluate the function's performance, especially if it involves computationally intensive tasks. For example, if your function has an array as an input, test for large arrays.
+
+4. **Provide the Solution:** Add your solution inside `solution.ts`. Make sure your solution passes all tests.
+
 ## Contribution Guidelines
 
 - Respect the coding style and guidelines used in the project.
