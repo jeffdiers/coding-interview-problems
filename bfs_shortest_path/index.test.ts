@@ -4,7 +4,7 @@ describe("shortestPathBinaryMatrix", () => {
   it("should find the shortest path in a binary matrix", () => {
     const grid1 = [
       [0, 1],
-      [1, 0],
+      [1, 1],
     ];
     expect(shortestPathBinaryMatrix(grid1)).toBe(-1);
 
@@ -13,16 +13,23 @@ describe("shortestPathBinaryMatrix", () => {
       [1, 1, 0],
       [1, 1, 0],
     ];
-    expect(shortestPathBinaryMatrix(grid2)).toBe(5);
+    expect(shortestPathBinaryMatrix(grid2)).toBe(4);
 
     const grid3 = [
+      [0, 0, 0],
+      [1, 1, 0],
+      [1, 1, 1],
+    ];
+    expect(shortestPathBinaryMatrix(grid3)).toBe(-1);
+
+    const grid4 = [
       [0, 0, 0, 0, 0],
       [1, 1, 1, 1, 0],
       [0, 0, 0, 0, 0],
       [0, 1, 1, 0, 1],
       [0, 0, 0, 0, 0],
     ];
-    expect(shortestPathBinaryMatrix(grid3)).toBe(11);
+    expect(shortestPathBinaryMatrix(grid4)).toBe(8);
   });
 
   it("should handle a 1x1 matrix", () => {
@@ -35,13 +42,13 @@ describe("shortestPathBinaryMatrix", () => {
       [0, 0],
       [1, 0],
     ];
-    expect(shortestPathBinaryMatrix(grid5)).toBe(3);
+    expect(shortestPathBinaryMatrix(grid5)).toBe(2);
 
     const grid6 = [
       [0, 1],
       [1, 0],
     ];
-    expect(shortestPathBinaryMatrix(grid6)).toBe(-1);
+    expect(shortestPathBinaryMatrix(grid6)).toBe(2);
   });
 
   it("should handle a matrix with a single obstacle", () => {
@@ -52,7 +59,7 @@ describe("shortestPathBinaryMatrix", () => {
       [0, 1],
       [0, 0],
     ];
-    expect(shortestPathBinaryMatrix(grid8)).toBe(3);
+    expect(shortestPathBinaryMatrix(grid8)).toBe(2);
   });
 
   it("should handle a matrix with all obstacles", () => {
@@ -61,5 +68,23 @@ describe("shortestPathBinaryMatrix", () => {
       [1, 1],
     ];
     expect(shortestPathBinaryMatrix(grid9)).toBe(-1);
+  });
+
+  it("should handle a matrix that isn't square", () => {
+    const grid10 = [
+      [0, 0, 1, 1, 1],
+      [1, 0, 0, 0, 1],
+      [1, 1, 1, 0, 0],
+    ];
+    expect(shortestPathBinaryMatrix(grid10)).toBe(5);
+  });
+
+  it("should handle a matrix that isn't square and blocked", () => {
+    const grid10 = [
+      [0, 0, 1, 1, 1],
+      [1, 0, 0, 0, 1],
+      [0, 0, 0, 0, 1],
+    ];
+    expect(shortestPathBinaryMatrix(grid10)).toBe(-1);
   });
 });

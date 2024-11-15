@@ -10,21 +10,18 @@
 // A clear path is defined as a path from the top-left corner
 // to the bottom-right corner consisting only of open cells.
 
-// You can move up, down, left, and right. You cannot move diagonally.
+// You can move up, down, left, right, or diagonally.
 
 // Input:
 // A binary matrix grid of size n x n where n is between 1 and 100.
 // The matrix contains only 0s (open cells) and 1s (blocked cells).
-// The top-left and bottom-right cells (grid[0][0] and grid[n-1][n-1])
-// are always open.
 
 // Output:
 // An integer representing the length of the shortest clear path from
 // (0, 0) to (n-1, n-1), or -1 if no clear path exists.
 
 // Notes:
-// You can move up, down, left, and right, but not diagonally.
-// The top-left and bottom-right cells are always open.
+// You can move up, down, left, right, and diagonally.
 // To solve this problem using BFS, you can start from the top-left
 // corner (0, 0) and explore all possible valid moves while keeping
 // track of the distance. You'll need to use a queue data structure to
@@ -37,7 +34,7 @@ export const shortestPathBinaryMatrix = (grid: number[][]) => {
 // Example
 const grid1 = [
   [0, 1],
-  [1, 0],
+  [1, 1],
 ];
 console.log(shortestPathBinaryMatrix(grid1)); // Should return -1
 
@@ -48,11 +45,11 @@ const grid2 = [
   [0, 1, 1, 0, 1],
   [0, 0, 0, 0, 0],
 ];
-console.log(shortestPathBinaryMatrix(grid2)); // Should return 11
+console.log(shortestPathBinaryMatrix(grid2)); // Should return 8
 
 const grid3 = [
   [0, 0, 0],
   [1, 1, 0],
   [1, 1, 0],
 ];
-console.log(shortestPathBinaryMatrix(grid3)); // Should return 5
+console.log(shortestPathBinaryMatrix(grid3)); // Should return 4

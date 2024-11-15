@@ -16,11 +16,33 @@ describe("canTravelMatrix function", () => {
     const test1 = [
       [0, 1, 1, 0, 0],
       [0, 1, 1, 0, 1],
-      [0, 0, 1, 0, 1],
+      [0, 0, 1, 1, 1],
       [1, 0, 0, 1, 0],
       [0, 1, 1, 1, 0],
     ];
     expect(canTravelMatrix(test1)).toBe(false);
+  });
+
+  it("should handle none square matrix", () => {
+    const test1 = [
+      [0, 1, 1, 0, 0],
+      [0, 1, 1, 0, 1],
+      [0, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0],
+      [0, 1, 1, 1, 0],
+      [1, 1, 1, 0, 0],
+      [1, 0, 0, 0, 1],
+      [0, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0],
+    ];
+    expect(canTravelMatrix(test1)).toBe(true);
+
+    const test2 = [
+      [0, 1, 1, 0, 0, 0, 0, 0],
+      [0, 1, 0, 0, 1, 1, 1, 0],
+      [0, 0, 1, 0, 1, 0, 0, 0],
+    ];
+    expect(canTravelMatrix(test2)).toBe(true);
   });
 
   it("should handle edge cases", () => {

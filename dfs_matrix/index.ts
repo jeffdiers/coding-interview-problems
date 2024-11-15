@@ -3,7 +3,7 @@
 // The matrix has either a 0 to pass or 1 that blocks.
 // If you can reach the end return true, otherwise return false.
 
-export const canTravelMatrix = (matrix: number[][]) => {
+export const canTravelMatrix = (matrix) => {
   // Your code here
 };
 
@@ -11,7 +11,7 @@ export const canTravelMatrix = (matrix: number[][]) => {
 const matrix = [
   [0, 1, 1, 0, 0],
   [0, 1, 1, 0, 1],
-  [0, 0, 1, 0, 1],
+  [0, 1, 1, 0, 1],
   [1, 0, 0, 0, 0],
   [0, 1, 1, 1, 0],
 ];
