@@ -18,9 +18,13 @@ export const canTravelMatrix = (matrix: number[][]) => {
 
     const traverse = [
       [x - 1, y],
-      [x, y - 1],
       [x + 1, y],
+      [x, y - 1],
       [x, y + 1],
+      [x + 1, y + 1],
+      [x + 1, y - 1],
+      [x - 1, y - 1],
+      [x - 1, y + 1],
     ];
     for (const [dx, dy] of traverse) {
       if (dfs(dx, dy)) return true;

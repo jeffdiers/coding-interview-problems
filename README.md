@@ -36,7 +36,9 @@ To get started with these coding challenges, follow these steps:
 
 ## Problem Categories
 
-Here are some of the problem categories you'll find in this repository:
+There are two main categories, Algorithms and React.
+
+Here are some of the problem categories you'll find in the Algorithms section:
 
 - Arrays and Strings
 - Linked Lists
@@ -44,7 +46,10 @@ Here are some of the problem categories you'll find in this repository:
 - Dynamic Programming
 - Sorting and Searching
 - Recursion and Backtracking
-- ...and many more!
+
+Here are some of the problem categories you'll find in the React section:
+
+- Hooks
 
 ## Contributing
 

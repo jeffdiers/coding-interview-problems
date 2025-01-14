@@ -3,7 +3,7 @@
 // The matrix has either a 0 to pass or 1 that blocks.
 // If you can reach the end return true, otherwise return false.
 
-export const canTravelMatrix = (matrix) => {
+export const canTravelMatrix = (matrix: number[][]) => {
   // Your code here
 };
 
